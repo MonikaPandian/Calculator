@@ -6,6 +6,7 @@ calus.classList.add("calus")
 let span= document.createElement("span")
 span.classList.add("text-right")
 span.setAttribute("id","span")
+
 var input = document. createElement("input") 
 input. setAttribute("type","text")
 input.setAttribute("id","input")
@@ -101,39 +102,41 @@ sub.setAttribute("id","sub")
 sub.setAttribute("value","-")
 sub.innerText="-"
 
-var clear = document.createElement("button")
-clear.classList.add("bg-danger","text-light")
-clear.setAttribute("id","clear")
-clear.setAttribute("value","")
-clear.innerText="C"
+var clr = document.createElement("button")
+clr.classList.add("bg-danger","text-light")
+clr.setAttribute("id","clear")
+clr.setAttribute("value","")
+clr.innerText="C"
+clr.addEventListener("click",clear)
 
          container.append(calus)
          calus.append(span)
          calus.append(input)
-         calus.append(one)
-         calus.append(two)
-         calus.append(three)
-         calus.append(four)
-         calus.append(five)
-         calus.append(six)
          calus.append(seven)
          calus.append(eight)
          calus.append(nine)
-         calus.append(zero)
-         calus.append(sub)
          calus.append(add)
+         calus.append(four)
+         calus.append(five)
+         calus.append(six)
+         calus.append(sub)
+         calus.append(one)
+         calus.append(two)
+         calus.append(three)
          calus.append(multi)
-         calus.append(divi)
-         calus.append(clear)
+         calus.append(clr)
+         calus.append(zero)
          calus.append(equal)
-
+         calus.append(divi)
          document.body.append(container)
+         
          
 
 var calus=document.querySelector('.calus')
 calus.addEventListener('click', display)
-clear.addEventListener('click',clear)
+
 equal.addEventListener('click', result)
+
 
 var input= document.querySelector('.calus')
 var finalresult=document.querySelector('#input')
@@ -154,8 +157,9 @@ function clear(){
     var span = document.querySelector("#span")
     var finalresult = document.querySelector("#input")
     span.innerHTML=""
-    finalresult.value = '0'
+    finalresult.value = '0'    
 }
+
 function result(){
     var span = document.querySelector('#span'); 
     var finalresult = document.querySelector('#input')
