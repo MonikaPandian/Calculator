@@ -12,7 +12,7 @@ var headingdiv=document.createElement("div")
 
 var title=document.createElement("h1")
 title.setAttribute("id","title")
-title.innerText="Calculator with DOM"
+title.innerText="Calculator using DOM"
 
 var description=document.createElement("p")
 description.innerText="Calculator"
